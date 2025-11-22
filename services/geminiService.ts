@@ -1,8 +1,10 @@
 import { GoogleGenAI } from "@google/genai";
 
 const getAiClient = () => {
-  const apiKey = process.env.API_KEY;
+  // Vite uses import.meta.env for environment variables
+  const apiKey = import.meta.env.VITE_API_KEY;
   if (!apiKey) {
+    console.error("VITE_API_KEY is missing. Make sure it is set in your .env file.");
     throw new Error("API_KEY is not defined in the environment.");
   }
   return new GoogleGenAI({ apiKey });
