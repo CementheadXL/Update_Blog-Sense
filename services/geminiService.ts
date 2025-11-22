@@ -1,13 +1,15 @@
 import { GoogleGenAI } from "@google/genai";
 
+// Declare process to ensure TypeScript recognizes it without needing @types/node
+declare var process: {
+  env: {
+    API_KEY: string;
+  };
+};
+
 const getAiClient = () => {
-  // Vite uses import.meta.env for environment variables
-  const apiKey = import.meta.env.VITE_API_KEY;
-  if (!apiKey) {
-    console.error("VITE_API_KEY is missing. Make sure it is set in your .env file.");
-    throw new Error("API_KEY is not defined in the environment.");
-  }
-  return new GoogleGenAI({ apiKey });
+  // Always use process.env.API_KEY directly as per guidelines
+  return new GoogleGenAI({ apiKey: process.env.API_KEY });
 };
 
 export const generateResearchStrategy = async (
