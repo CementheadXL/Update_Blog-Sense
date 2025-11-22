@@ -82,12 +82,12 @@ const About: React.FC = () => {
                    <span className="text-sm text-accent">Franklin University</span>
                  </li>
                  <li className="flex flex-col">
-                   <span className="font-bold text-lg text-gray-800">Bachelor of Science</span>
-                   <span className="text-sm text-gray-500">Social Sciences focus</span>
+                   <span className="font-bold text-lg text-gray-800">Bachelor of Science in Business Management and Leadership</span>
+                   <span className="text-sm text-gray-500">Franklin University</span>
                  </li>
                  <li className="flex flex-col">
-                   <span className="font-bold text-lg text-gray-800">Associate Degree</span>
-                   <span className="text-sm text-gray-500">Started age 37</span>
+                   <span className="font-bold text-lg text-gray-800">Associate Degree in Business Administration</span>
+                   <span className="text-sm text-gray-500">Started age 37 at Cuyahoga Community College</span>
                  </li>
                </ul>
              </div>
