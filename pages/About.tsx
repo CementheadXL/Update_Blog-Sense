@@ -87,7 +87,7 @@ const About: React.FC = () => {
                  </li>
                  <li className="flex flex-col">
                    <span className="font-bold text-lg text-gray-800">Associate Degree in Business Administration</span>
-                   <span className="text-sm text-gray-500">Started age 37 at Cuyahoga Community College</span>
+                   <span className="text-sm text-gray-500">Cuyahoga Community College</span>
                  </li>
                </ul>
              </div>
