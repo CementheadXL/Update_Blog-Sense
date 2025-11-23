@@ -1,5 +1,12 @@
 import React from 'react';
-import { Linkedin, Mail, Twitter } from 'lucide-react';
+import { Linkedin, Mail } from 'lucide-react';
+
+// Custom X (Twitter) Logo component
+const XLogo = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 const Footer: React.FC = () => {
   return (
@@ -11,15 +18,28 @@ const Footer: React.FC = () => {
             <p className="text-sm text-gray-500 mt-1">Innovating Prospect Development with AI.</p>
           </div>
           <div className="flex space-x-6">
-            <a href="https://www.linkedin.com/in/ryanjclement" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent">
+            <a 
+              href="https://www.linkedin.com/in/ryanjclement" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-accent transition-colors"
+            >
               <span className="sr-only">LinkedIn</span>
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="https://x.com/RyanClemen57495" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent">
-              <span className="sr-only">Twitter</span>
-              <Twitter className="h-6 w-6" />
+            <a 
+              href="https://x.com/RyanClemen57495" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-accent transition-colors"
+            >
+              <span className="sr-only">X (formerly Twitter)</span>
+              <XLogo className="h-6 w-6" />
             </a>
-            <a href="mailto:ryanclementconsulting@gmail.com" className="text-gray-400 hover:text-accent">
+            <a 
+              href="mailto:ryanclementconsulting@gmail.com" 
+              className="text-gray-400 hover:text-accent transition-colors"
+            >
               <span className="sr-only">Email</span>
               <Mail className="h-6 w-6" />
             </a>
