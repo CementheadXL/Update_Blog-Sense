@@ -11,15 +11,15 @@ const Footer: React.FC = () => {
             <p className="text-sm text-gray-500 mt-1">Innovating Prospect Development with AI.</p>
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-accent">
+            <a href="https://www.linkedin.com/in/ryanjclement" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent">
               <span className="sr-only">LinkedIn</span>
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-accent">
+            <a href="https://x.com/RyanClemen57495" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent">
               <span className="sr-only">Twitter</span>
               <Twitter className="h-6 w-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-accent">
+            <a href="mailto:ryanclementconsulting@gmail.com" className="text-gray-400 hover:text-accent">
               <span className="sr-only">Email</span>
               <Mail className="h-6 w-6" />
             </a>
