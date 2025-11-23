@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
     { label: 'Home', value: PageState.HOME },
     { label: 'About Me', value: PageState.ABOUT },
     { label: 'Blog', value: PageState.BLOG },
-    { label: 'Audio & NotebookLLM', value: PageState.AUDIO },
+    { label: 'Webcasts & Audio', value: PageState.AUDIO },
     { label: 'AI Research Tool', value: PageState.TOOLS },
   ];
 
