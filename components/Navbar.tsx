@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
     { label: 'Home', value: PageState.HOME },
     { label: 'About Me', value: PageState.ABOUT },
     { label: 'Blog', value: PageState.BLOG },
-    { label: 'Audio & NotebookLLM', value: PageState.AUDIO },
+    { label: 'Webcasts & Audio', value: PageState.AUDIO },
     { label: 'AI Research Tool', value: PageState.TOOLS },
   ];
 
@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                 className="h-full w-full object-cover" 
               />
             </div>
-            <span className="font-serif font-bold text-xl tracking-tight">Prospect Intelligence</span>
+            <span className="font-serif font-bold text-xl tracking-tight">Blog-Sense</span>
           </div>
           
           <div className="hidden md:block">
