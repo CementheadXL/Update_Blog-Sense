@@ -24,18 +24,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center cursor-pointer group" onClick={() => setCurrentPage(PageState.HOME)}>
             <div className="relative mr-3 overflow-hidden rounded-full h-10 w-10 border-2 border-accent/50 group-hover:border-accent transition-colors">
-              <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                poster="brain-logo.png"
-                className="h-full w-full object-cover"
-              >
-                <source src="veo-logo.mp4" type="video/mp4" />
-                {/* Fallback to image if video fails */}
-                <img src="brain-logo.png" alt="Prospect Intelligence Logo" />
-              </video>
+              <img 
+                src="/brain-logo.png" 
+                alt="Prospect Intelligence Logo" 
+                className="h-full w-full object-cover" 
+              />
             </div>
             <span className="font-serif font-bold text-xl tracking-tight">Prospect Intelligence</span>
           </div>

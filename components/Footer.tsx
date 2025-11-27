@@ -16,17 +16,11 @@ const Footer: React.FC = () => {
           <div className="mb-4 md:mb-0 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
               <div className="h-8 w-8 rounded-full overflow-hidden border border-gray-200">
-                <video 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  poster="brain-logo.png"
-                  className="h-full w-full object-cover"
-                >
-                  <source src="veo-logo.mp4" type="video/mp4" />
-                  <img src="brain-logo.png" alt="Logo" />
-                </video>
+                <img 
+                  src="/brain-logo.png" 
+                  alt="Logo" 
+                  className="h-full w-full object-cover" 
+                />
               </div>
               <h3 className="text-lg font-serif font-bold text-primary">Prospect Intelligence</h3>
             </div>
