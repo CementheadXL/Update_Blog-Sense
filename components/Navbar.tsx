@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageState } from '../types';
-import { Menu, X, BrainCircuit } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: PageState;
@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
     { label: 'Home', value: PageState.HOME },
     { label: 'About Me', value: PageState.ABOUT },
     { label: 'Blog', value: PageState.BLOG },
-    { label: 'Webcasts & Audio', value: PageState.AUDIO },
+    { label: 'Audio & NotebookLLM', value: PageState.AUDIO },
     { label: 'AI Research Tool', value: PageState.TOOLS },
   ];
 
@@ -22,9 +22,22 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
     <nav className="bg-primary text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center cursor-pointer" onClick={() => setCurrentPage(PageState.HOME)}>
-            <BrainCircuit className="h-8 w-8 text-accent mr-2" />
-            <span className="font-serif font-bold text-xl tracking-tight">Blog-Sense</span>
+          <div className="flex items-center cursor-pointer group" onClick={() => setCurrentPage(PageState.HOME)}>
+            <div className="relative mr-3 overflow-hidden rounded-full h-10 w-10 border-2 border-accent/50 group-hover:border-accent transition-colors">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                poster="brain-logo.png"
+                className="h-full w-full object-cover"
+              >
+                <source src="veo-logo.mp4" type="video/mp4" />
+                {/* Fallback to image if video fails */}
+                <img src="brain-logo.png" alt="Prospect Intelligence Logo" />
+              </video>
+            </div>
+            <span className="font-serif font-bold text-xl tracking-tight">Prospect Intelligence</span>
           </div>
           
           <div className="hidden md:block">

@@ -13,11 +13,26 @@ const Footer: React.FC = () => {
     <footer className="bg-white border-t border-gray-200 py-12 mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <h3 className="text-lg font-serif font-bold text-primary">Blog-Sense</h3>
-            <p className="text-sm text-gray-500 mt-1">Innovating Prospect Development with AI.</p>
+          <div className="mb-4 md:mb-0 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+              <div className="h-8 w-8 rounded-full overflow-hidden border border-gray-200">
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  poster="brain-logo.png"
+                  className="h-full w-full object-cover"
+                >
+                  <source src="veo-logo.mp4" type="video/mp4" />
+                  <img src="brain-logo.png" alt="Logo" />
+                </video>
+              </div>
+              <h3 className="text-lg font-serif font-bold text-primary">Prospect Intelligence</h3>
+            </div>
+            <p className="text-sm text-gray-500 mt-1">Combining the subjects of AI and Philanthropic Research.</p>
           </div>
-          <div className="flex space-x-6">
+          <div className="flex space-x-6 mt-4 md:mt-0">
             <a 
               href="https://www.linkedin.com/in/ryanjclement" 
               target="_blank" 
@@ -46,7 +61,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-100 pt-8 text-center md:text-left">
-          <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} Blog-Sense. All rights reserved.</p>
+          <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} Prospect Intelligence. All rights reserved.</p>
         </div>
       </div>
     </footer>

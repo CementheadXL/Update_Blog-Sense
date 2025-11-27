@@ -12,11 +12,22 @@ const Home: React.FC<HomeProps> = ({ setPage }) => {
       {/* Hero Section */}
       <div className="relative bg-primary text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-           <img 
-             src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop" 
-             alt="Technology Background" 
+           <video 
+             autoPlay 
+             loop 
+             muted 
+             playsInline
              className="w-full h-full object-cover"
-           />
+             poster="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+           >
+             <source src="veo-logo.mp4" type="video/mp4" />
+             {/* Fallback to original image if video fails or on power-save mode */}
+             <img 
+               src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop" 
+               alt="Technology Background" 
+               className="w-full h-full object-cover"
+             />
+           </video>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="md:w-4/5">
@@ -24,8 +35,8 @@ const Home: React.FC<HomeProps> = ({ setPage }) => {
               From the $2,000 Computer to <span className="text-accent">AI in Philanthropy</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
+              <span className="text-white font-medium block mb-2">Combining the subjects of AI and Philanthropic Research.</span>
               Why philanthropy must have a seat at the table when AI policies are written. 
-              Exploring the impact of AI, data strategy, and predictive modeling on the future of nonprofit work.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
