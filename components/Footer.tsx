@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                   className="h-full w-full object-cover" 
                 />
               </div>
-              <h3 className="text-lg font-serif font-bold text-primary">Prospect Intelligence</h3>
+              <h3 className="text-lg font-serif font-bold text-primary">Blog-Sense</h3>
             </div>
             <p className="text-sm text-gray-500 mt-1">Combining the subjects of AI and Philanthropic Research.</p>
           </div>
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-100 pt-8 text-center md:text-left">
-          <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} Prospect Intelligence. All rights reserved.</p>
+          <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} Blog-Sense. All rights reserved.</p>
         </div>
       </div>
     </footer>
