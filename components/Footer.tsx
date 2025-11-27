@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                   className="h-full w-full object-cover" 
                 />
               </div>
-              <h3 className="text-lg font-serif font-bold text-primary">Blog-Sense</h3>
+              <h3 className="text-lg font-serif font-bold text-primary">Prospect Intelligence</h3>
             </div>
             <p className="text-sm text-gray-500 mt-1">Combining the subjects of AI and Philanthropic Research.</p>
           </div>
