@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { PageState } from '../types';
 import { ArrowRight, Database, Search, TrendingUp } from 'lucide-react';
@@ -17,15 +18,15 @@ const Home: React.FC<HomeProps> = ({ setPage }) => {
              loop 
              muted 
              playsInline
-             className="w-full h-full object-cover"
+             className="w-full h-full object-cover object-top"
              poster="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
            >
-             <source src="veo-logo.mp4" type="video/mp4" />
+             <source src="/veo-logo.mp4" type="video/mp4" />
              {/* Fallback to original image if video fails or on power-save mode */}
              <img 
                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop" 
                alt="Technology Background" 
-               className="w-full h-full object-cover"
+               className="w-full h-full object-cover object-top"
              />
            </video>
         </div>
