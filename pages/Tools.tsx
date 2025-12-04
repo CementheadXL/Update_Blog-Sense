@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { generateResearchStrategy } from '../services/geminiService';
 import { Sparkles, Loader2, FileText, Target } from 'lucide-react';
@@ -22,7 +23,9 @@ const Tools: React.FC = () => {
       const strategy = await generateResearchStrategy(topic, sector);
       setResult(strategy);
     } catch (err) {
-      setError('Failed to generate strategy. Please check your API key or try again later.');
+      // Display the actual error message from the service
+      const errorMessage = err instanceof Error ? err.message : 'An unexpected error occurred';
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -98,8 +101,8 @@ const Tools: React.FC = () => {
         <div className="lg:col-span-2">
           <div className="bg-white min-h-[500px] p-8 rounded-xl shadow-sm border border-gray-200">
             {error && (
-               <div className="bg-red-50 text-red-600 p-4 rounded-md mb-4 border border-red-100">
-                 {error}
+               <div className="bg-red-50 text-red-600 p-4 rounded-md mb-4 border border-red-100 font-mono text-sm">
+                 <strong>Error:</strong> {error}
                </div>
             )}
             

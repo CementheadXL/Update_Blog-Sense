@@ -11,8 +11,19 @@ async function callGeminiApi(promptText: string): Promise<string> {
     });
     
     if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.error || `Server error: ${response.status}`);
+      // Handle non-JSON errors (like 404 HTML pages returned by GitHub Pages or Vercel routing issues)
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || `Server error: ${response.status}`);
+      } else {
+        // If the server returns HTML (likely a 404 page), we can't parse it as JSON
+        const text = await response.text();
+        if (response.status === 404) {
+             throw new Error("API endpoint not found (404). If you recently migrated to Vercel, ensure the DNS has propagated and you are accessing the Vercel domain, not GitHub Pages.");
+        }
+        throw new Error(`Server returned non-JSON error (${response.status}): ${text.slice(0, 100)}...`);
+      }
     }
 
     const data = await response.json();
