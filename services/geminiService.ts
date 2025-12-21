@@ -4,6 +4,11 @@
  */
 async function callGeminiApi(promptText: string): Promise<string> {
   try {
+    if (!promptText || promptText.trim() === "") {
+      throw new Error("Prompt text is empty.");
+    }
+
+    console.log(`Calling Gemini API with prompt length: ${promptText.length}`);
     const response = await fetch('/api/generate', { 
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -15,7 +20,7 @@ async function callGeminiApi(promptText: string): Promise<string> {
       const contentType = response.headers.get("content-type");
       if (contentType && contentType.includes("application/json")) {
         const errorData = await response.json();
-        throw new Error(errorData.error || `Server error: ${response.status}`);
+        throw new Error(errorData.error || `Server error: ${response.status}. Check Vercel Function logs.`);
       } else {
         // If the server returns HTML (likely a 404 page), we can't parse it as JSON
         const text = await response.text();
